@@ -5,9 +5,11 @@ import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
 import { useEffect, useMemo, useState } from "react";
 import styles from "./page.module.css";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
   const [init, setInit] = useState(false);
+  const router = useRouter();
 
   useEffect(() => {
     initParticlesEngine(async (engine) => {
@@ -328,11 +330,18 @@ export default function Home() {
     }),
     []
   );
+
+  const handleClick = () => {
+    router.push("/about-me");
+  };
+
   if (init) {
     return (
-      <div>
-        <div className={styles.headline}>
-          <h1>Test</h1>
+      <div className={styles.container}>
+        <div className={styles.glasspanel}>
+          <button className={styles.glassButton} onClick={handleClick}>
+            Test
+          </button>
         </div>
         <Particles
           id="tsparticles"
@@ -342,5 +351,5 @@ export default function Home() {
       </div>
     );
   }
-  return <></>;
+  return <>Loading..</>;
 }
