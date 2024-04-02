@@ -1,0 +1,10 @@
+.layout {
+  padding: 20px 30px;
+}
+
+.container p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}

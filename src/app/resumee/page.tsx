@@ -2,13 +2,13 @@
 
 import Glasspanel from "@/components/glass-panel/Glasspanel";
 import styles from "./page.module.css";
-import { useEffect, useMemo, useState } from "react";
 import { initParticlesEngine } from "@tsparticles/react";
 import Particles from "@tsparticles/react";
+import { useEffect, useMemo, useState } from "react";
 import { loadSlim } from "@tsparticles/slim";
 import { Container, ISourceOptions } from "@tsparticles/engine";
 
-export default function AboutMe() {
+const Resumee = () => {
   const [init, setInit] = useState(false);
   useEffect(() => {
     initParticlesEngine(async (engine) => {
@@ -323,8 +323,6 @@ export default function AboutMe() {
     }),
     []
   );
-  const handleClick = () => {};
-
   return (
     <>
       <Particles
@@ -332,57 +330,78 @@ export default function AboutMe() {
         particlesLoaded={particlesLoaded}
         options={options}
       />
-      <Glasspanel handleClick={handleClick}>
+      <Glasspanel handleClick={() => {}}>
         <div className={styles.container}>
-          <h1 style={{ textAlign: "center" }}>
-            Willkommen auf meiner Webseite
-          </h1>
-          <br />
-          <br />
-          <br />
-          <p>
-            Hey, ich bin Meik und habe an der Hochschule Fulda Digitale Medien
-            studiert. Seit 2017 bin ich als Frontend-Entwickler im
-            Rhein-Main-Gebiet tätig und während meiner beruflichen Entwicklung
-            habe ich vor allem ReactJS lieben gelernt.
-          </p>
-          <p>
-            Aber auch mit NextJs arbeite ich gerne. Meine freude am
-            Programmieren hört nicht bei meinem Job auf – in meiner Freizeit
-            probiere ich gerne neuen Frameworks aus oder lese Blogs zu den
-            aktuellen Themen in der Frontendentwicklung.
-          </p>{" "}
-          <p>
-            Abgesehen davon ist mir Bewegung wichtig, daher gehe ich ins
-            Fitnessstudio , schwimmen und halte mich regelmäßig an der frischen
-            Luft auf.
-          </p>
-          <div className="highlight">
-            <p>
-              Hier können Sie mich erreichen:
-              <ul>
-                <li>
-                  Email: <strong>bolendermeik@gmail.com</strong>
-                </li>
-                <li>
-                  LinkedIn:{" "}
-                  <strong>
-                    <a href="meikbolender@example.com">Mein LinkedIn Profil</a>
-                  </strong>
-                </li>
-                <li>
-                  Xing:{" "}
-                  <strong>
-                    <a href="https://www.xing.com/profile/Meik_Bolender">
-                      Mein Xing Profil
-                    </a>
-                  </strong>
-                </li>
-              </ul>
+          <div className={styles.section}>
+            <h1>Projekte</h1>
+            <p className={styles.title}>
+              <strong>ETECTURE GmbH, Frankfurt</strong> - Frontend Entwickler
+              (05/2017 - 05/2020)
             </p>
+            <br />
+
+            <p>
+              myVolkswagen - Plattform zum verwalten seines Volkswagen KFZ.
+              Entwickelt in ReactJs
+              <p>
+                <a href="https://www.volkswagen.de/de/besitzer-und-nutzer/myvolkswagen.html">
+                  myVolkswagen - Webseite
+                </a>
+              </p>
+            </p>
+            <br />
+            <br />
+            <br />
+            <p className={styles.title}>
+              <strong>VR Smart Finanz GmbH, Eschborn</strong> - Frontend
+              Entwickler (06/2020 - 06/2022)
+            </p>
+            <br />
+            <p>
+              Smart Guide - Eine Buchhaltungssoftware für Kleinunternehmer.
+              Entwickelt mit ReactJS
+              <p>
+                <a href="https://www.vr-smart-guide.de/buchhaltungssoftware/">
+                  VR Smart Guide - Webseite
+                </a>
+              </p>
+            </p>
+            <br />
+            <br />
+            <br />
+            <p className={styles.title}>
+              <strong>Curalie GmbH, Berlin</strong> - Frontend Entwickler
+              (07/2022 - 09/2023)
+            </p>
+            <br />
+            <p>
+              Curalie - Anwendung zum anlegen digitaler Patientenakten, mit
+              Terminfunktion und medizinische Präventionsprogramme für
+              Patienten. Entwickelt mit ReactJS.
+              <p>Dieses Projekt wurde</p>
+              eingestellt.
+              <br />
+              <a href="https://www.zeit.de/news/2023-12/15/medizinkonzern-fresenius-stampft-digitaltochter-curalie-ein">
+                Pressemitteilung
+              </a>
+              <p>
+                <a href="https://curalie.de/">Curalie - Webseite</a>
+              </p>
+            </p>
+            <br />
+            <br />
+            <br />
+            <p className={styles.title}>
+              <strong>Eviden Germany GmbH, Frankfurt</strong> - Frontend
+              Entwickler (10/2023 - heute)
+            </p>
+            <br />
+            <p>Internes Projekt - Entwicklung eines Stuffin-Tools mit NextJS</p>
           </div>
         </div>
       </Glasspanel>
     </>
   );
-}
+};
+
+export default Resumee;

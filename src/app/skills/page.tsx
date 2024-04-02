@@ -1,14 +1,13 @@
 "use client";
 
 import Glasspanel from "@/components/glass-panel/Glasspanel";
-import styles from "./page.module.css";
-import { useEffect, useMemo, useState } from "react";
-import { initParticlesEngine } from "@tsparticles/react";
-import Particles from "@tsparticles/react";
-import { loadSlim } from "@tsparticles/slim";
+import WordCloud from "@/components/word-cloud/WordCloud";
 import { Container, ISourceOptions } from "@tsparticles/engine";
+import Particles, { initParticlesEngine } from "@tsparticles/react";
+import { loadSlim } from "@tsparticles/slim";
+import { useEffect, useMemo, useState } from "react";
 
-export default function AboutMe() {
+const Skills = () => {
   const [init, setInit] = useState(false);
   useEffect(() => {
     initParticlesEngine(async (engine) => {
@@ -323,66 +322,57 @@ export default function AboutMe() {
     }),
     []
   );
-  const handleClick = () => {};
 
-  return (
-    <>
-      <Particles
-        id="tsparticles"
-        particlesLoaded={particlesLoaded}
-        options={options}
-      />
-      <Glasspanel handleClick={handleClick}>
-        <div className={styles.container}>
-          <h1 style={{ textAlign: "center" }}>
-            Willkommen auf meiner Webseite
-          </h1>
-          <br />
-          <br />
-          <br />
-          <p>
-            Hey, ich bin Meik und habe an der Hochschule Fulda Digitale Medien
-            studiert. Seit 2017 bin ich als Frontend-Entwickler im
-            Rhein-Main-Gebiet tätig und während meiner beruflichen Entwicklung
-            habe ich vor allem ReactJS lieben gelernt.
-          </p>
-          <p>
-            Aber auch mit NextJs arbeite ich gerne. Meine freude am
-            Programmieren hört nicht bei meinem Job auf – in meiner Freizeit
-            probiere ich gerne neuen Frameworks aus oder lese Blogs zu den
-            aktuellen Themen in der Frontendentwicklung.
-          </p>{" "}
-          <p>
-            Abgesehen davon ist mir Bewegung wichtig, daher gehe ich ins
-            Fitnessstudio , schwimmen und halte mich regelmäßig an der frischen
-            Luft auf.
-          </p>
-          <div className="highlight">
-            <p>
-              Hier können Sie mich erreichen:
+  const words = [
+    "ReactJS",
+    "HTML",
+    "CSS",
+    "SASS",
+    "Bootstrap",
+    "GitHub",
+    "JavaScript",
+    "ReduxJS",
+    "NextJS",
+    "TypeScript",
+    "GraphQL",
+    "PrismaJS",
+    "React Native",
+    "Figma",
+    "Scrum",
+    "Kanban",
+    "Jira",
+    "Git",
+  ];
+
+  if (init) {
+    return (
+      <>
+        <Particles
+          id="tsparticles"
+          particlesLoaded={particlesLoaded}
+          options={options}
+        />
+        <Glasspanel handleClick={() => {}}>
+          <div
+            style={{
+              
+              width: "100%",
+              textAlign: 'center'
+            }}>
+            <h1>Skills</h1>
+            <div>
               <ul>
-                <li>
-                  Email: <strong>bolendermeik@gmail.com</strong>
-                </li>
-                <li>
-                  LinkedIn:{" "}
-                  <strong>
-                    <a href="meikbolender@example.com">Mein LinkedIn Profil</a>
-                  </strong>
-                </li>
-                <li>
-                  Xing:{" "}
-                  <strong>
-                    <a href="https://www.xing.com/profile/Meik_Bolender">
-                      Mein Xing Profil
-                    </a>
-                  </strong>
-                </li>
+                {words.map((word) => (
+                  <li key={word}>{word}</li>
+                ))}
               </ul>
-            </p>
+            </div>
           </div>
-        </div>
-      </Glasspanel>
-    </>
-  );
-}
+        </Glasspanel>
+      </>
+    );
+  }
+
+  return <>Loading...</>;
+};
+export default Skills;

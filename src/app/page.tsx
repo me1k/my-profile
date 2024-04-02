@@ -6,6 +6,7 @@ import { loadSlim } from "@tsparticles/slim";
 import { useEffect, useMemo, useState } from "react";
 import styles from "./page.module.css";
 import { useRouter } from "next/navigation";
+import Glasspanel from "../components/glass-panel/Glasspanel";
 
 export default function Home() {
   const [init, setInit] = useState(false);
@@ -331,18 +332,38 @@ export default function Home() {
     []
   );
 
-  const handleClick = () => {
-    router.push("/about-me");
+  const handleClick = (path: string) => {
+    router.push(path);
   };
 
   if (init) {
     return (
-      <div className={styles.container}>
-        <div className={styles.glasspanel}>
-          <button className={styles.glassButton} onClick={handleClick}>
-            Test
-          </button>
-        </div>
+      <div>
+        <Glasspanel handleClick={handleClick}>
+          <>
+            <div>
+              <button
+                className={styles.glassButton}
+                onClick={() => handleClick("/about-me")}>
+                Das bin ich
+              </button>
+            </div>
+            <div>
+              <button
+                className={styles.glassButton}
+                onClick={() => handleClick("/resumee")}>
+                Lebenslauf
+              </button>
+            </div>
+            <div>
+              <button
+                className={styles.glassButton}
+                onClick={() => handleClick("/skills")}>
+                Skills
+              </button>
+            </div>
+          </>
+        </Glasspanel>
         <Particles
           id="tsparticles"
           particlesLoaded={particlesLoaded}

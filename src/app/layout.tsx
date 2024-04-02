@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import styles from "./page.module.css";
 
 export const metadata: Metadata = {
   title: "me1kb",
@@ -13,7 +14,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <div className={styles.container}>{children}</div>
+      </body>
     </html>
   );
 }
