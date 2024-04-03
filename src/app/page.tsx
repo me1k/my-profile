@@ -68,19 +68,23 @@ export default function Home() {
         <span>contact: </span>
         <ul>
           <li className={styles.list_item}>
-            <Link href="www.linkedin.com/in/meik-bolender-652554269">
+            <a
+              href="https://www.linkedin.com/in/meik-bolender-652554269"
+              target="_blank">
               <FaLinkedin color="#99ff00" />
-            </Link>
+            </a>
           </li>
           <li className={styles.list_item}>
-            <Link href="https://www.xing.com/profile/Meik_Bolender">
+            <a
+              href="https://www.xing.com/profile/Meik_Bolender"
+              target="_blank">
               <FaXingSquare color="#99ff00" />
-            </Link>
+            </a>
           </li>
           <li className={styles.list_item}>
-            <Link href="mailto:bolendermeik@gmail.com">
+            <a href="mailto:bolendermeik@gmail.com">
               <MdEmail color="#99ff00" />
-            </Link>
+            </a>
           </li>
         </ul>
       </div>
