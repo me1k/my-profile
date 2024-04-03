@@ -367,13 +367,17 @@ export default function AboutMe() {
                 <li>
                   LinkedIn:{" "}
                   <strong>
-                    <a href="meikbolender@example.com">Mein LinkedIn Profil</a>
+                    <a target="_blank" href="meikbolender@example.com">
+                      Mein LinkedIn Profil
+                    </a>
                   </strong>
                 </li>
                 <li>
                   Xing:{" "}
                   <strong>
-                    <a href="https://www.xing.com/profile/Meik_Bolender">
+                    <a
+                      target="_blank"
+                      href="https://www.xing.com/profile/Meik_Bolender">
                       Mein Xing Profil
                     </a>
                   </strong>

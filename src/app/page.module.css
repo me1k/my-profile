@@ -1,28 +1,39 @@
-#tsparticles > canvas {
-  z-index: -10;
+.centered_container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.container {
-  position: relative;
-  width: 100%; /* or any desired width */
-  height: 100vh; /* or any desired height */
+.headline {
+  margin-bottom: 2rem;
+  background: rgb(153,255,0);
+  background: linear-gradient(55deg, rgba(153,255,0,1) 0%, rgba(183,228,58,1) 44%, rgba(248,255,141,1) 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.glassButton {
-  padding: 24px 32px;
-  border: 0;
+.description {
+  color: #e6e6e6
+}
+
+.contact {
+  margin-top: 2rem;
+  color: #e6e6e6
+}
+
+.contact > span {
+  /* display: block needed since span is an inline element and cannot have margin without it */
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.list_item {
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+.list_item > a {
   text-decoration: none;
-  border-radius: 15px;
-  background-color: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(30px);
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 14px;
-  letter-spacing: 2px;
-  cursor: pointer;
-  text-transform: uppercase;
-}
-
-.glassButton:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+  color: inherit;
 }
