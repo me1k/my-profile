@@ -1,32 +1,32 @@
-"use client";
+'use client';
 
-import Image from "next/image";
-import styles from "./page.module.css";
-import { FaLinkedin } from "react-icons/fa";
-import { FaXingSquare } from "react-icons/fa";
-import { MdEmail } from "react-icons/md";
-import { Suspense } from "react";
-import Link from "next/link";
+import Image from 'next/image';
+import styles from './page.module.css';
+import { FaLinkedin } from 'react-icons/fa';
+import { FaXingSquare } from 'react-icons/fa';
+import { MdEmail } from 'react-icons/md';
+import { Suspense } from 'react';
+import Link from 'next/link';
 
 const skills = [
-  "ReactJS",
-  "HTML",
-  "CSS",
-  "SASS",
-  "Bootstrap",
-  "GitHub",
-  "JavaScript",
-  "ReduxJS",
-  "NextJS",
-  "TypeScript",
-  "GraphQL",
-  "PrismaJS",
-  "React Native",
-  "Figma",
-  "Scrum",
-  "Kanban",
-  "Jira",
-  "Git",
+  'ReactJS',
+  'HTML',
+  'CSS',
+  'SASS',
+  'Bootstrap',
+  'GitHub',
+  'JavaScript',
+  'ReduxJS',
+  'NextJS',
+  'TypeScript',
+  'GraphQL',
+  'PrismaJS',
+  'React Native',
+  'Figma',
+  'Scrum',
+  'Kanban',
+  'Jira',
+  'Git',
 ];
 
 export default function Home() {
@@ -35,14 +35,14 @@ export default function Home() {
       <div className={styles.headline}>
         <div
           style={{
-            display: "flex",
-            alignItems: "center",
-            gap: "2rem",
+            display: 'flex',
+            alignItems: 'center',
+            gap: '2rem',
           }}>
           <Suspense>
             <Image src="/me1.png" width={100} height={120} alt="meik" />
           </Suspense>
-          <div style={{ display: "flex", flexDirection: "column" }}>
+          <div style={{ display: 'flex', flexDirection: 'column' }}>
             <h1>Meik Bolender</h1>
             <h4>Frontend Developer</h4>
           </div>

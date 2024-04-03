@@ -1,10 +1,10 @@
-import type { Metadata } from "next";
-import "./globals.css";
-import styles from "./page.module.css";
+import type { Metadata } from 'next';
+import './globals.css';
+import styles from './page.module.css';
 
 export const metadata: Metadata = {
-  title: "me1kb",
-  description: "Generated with love",
+  title: 'me1kb',
+  description: 'Generated with love',
 };
 
 export default function RootLayout({
