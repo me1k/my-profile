@@ -9,24 +9,24 @@ import { Suspense } from 'react';
 import Link from 'next/link';
 
 const skills = [
-  'ReactJS',
-  'HTML',
-  'CSS',
-  'SASS',
-  'Bootstrap',
-  'GitHub',
-  'JavaScript',
-  'ReduxJS',
-  'NextJS',
-  'TypeScript',
-  'GraphQL',
-  'PrismaJS',
-  'React Native',
-  'Figma',
-  'Scrum',
-  'Kanban',
-  'Jira',
-  'Git',
+  'reactjs',
+  'html',
+  'css',
+  'sass',
+  'bootstrap',
+  'github',
+  'javascript',
+  'reduxjs',
+  'nextjs',
+  'typescript',
+  'graphql',
+  'prismajs',
+  'react native',
+  'figma',
+  'scrum',
+  'kanban',
+  'jira',
+  'git',
 ];
 
 export default function Home() {
@@ -43,15 +43,15 @@ export default function Home() {
             <Image src="/me1.png" width={100} height={120} alt="meik" />
           </Suspense>
           <div style={{ display: 'flex', flexDirection: 'column' }}>
-            <h1>Meik Bolender</h1>
-            <h4>Frontend Developer</h4>
+            <h1>meik bolender</h1>
+            <h4>frontend developer</h4>
           </div>
         </div>
       </div>
       <div className={styles.description}>
         <p>
-          i'm a german frontend developer located in Frankfurt am Main, i have
-          been practicing since May 2017, and i enjoy developing frontends with
+          i'm a german frontend developer located in frankfurt am main, i have
+          been practicing since may 2017, and i enjoy developing frontends with
           react.js mostly
         </p>
       </div>
