@@ -50,8 +50,9 @@ export default function Home() {
       </div>
       <div className={styles.description}>
         <p>
-          i'm a german frontend developer practicing since may 2017 and i enjoy
-          develop frontends with react mostly
+          i'm a german frontend developer located in Frankfurt am Main, i have
+          been practicing since May 2017, and i enjoy developing frontends with
+          react.js mostly
         </p>
       </div>
       <div className={styles.contact}>

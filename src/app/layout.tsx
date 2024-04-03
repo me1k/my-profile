@@ -3,8 +3,8 @@ import './globals.css';
 import styles from './page.module.css';
 
 export const metadata: Metadata = {
-  title: 'me1kb',
-  description: 'Generated with love',
+  title: 'meik bolender - web developer',
+  description: 'web developer',
 };
 
 export default function RootLayout({
