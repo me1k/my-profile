@@ -135,10 +135,18 @@ export default function Home() {
           </div>
           <div>
             {posts.map((post, index) => (
-              <div key={index}>
-                <p className={styles.guestbook_author}>{post.author}</p>
-                <p className={styles.guestbook_title}>{post.title}</p>
-                <p className={styles.guestbook_content}>{post.content}</p>
+              <div
+                key={index}
+                style={{
+                  marginTop: '1rem',
+                  display: 'flex',
+                  flexDirection: 'column',
+                }}>
+                <p className={styles.guestbook_author}>#{post.author}</p>
+                <p className={styles.guestbook_title}>Title: {post.title}</p>
+                <p className={styles.guestbook_content}>
+                  Comment: {post.content}
+                </p>
               </div>
             ))}
           </div>
