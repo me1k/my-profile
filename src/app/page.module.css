@@ -7,19 +7,24 @@
 
 .headline {
   margin-bottom: 2rem;
-  background: rgb(153,255,0);
-  background: linear-gradient(55deg, rgba(153,255,0,1) 0%, rgba(183,228,58,1) 44%, rgba(248,255,141,1) 100%);
+  background: rgb(153, 255, 0);
+  background: linear-gradient(
+    55deg,
+    rgba(153, 255, 0, 1) 0%,
+    rgba(183, 228, 58, 1) 44%,
+    rgba(248, 255, 141, 1) 100%
+  );
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .description {
-  color: #e6e6e6
+  color: #e6e6e6;
 }
 
 .contact {
   margin-top: 2rem;
-  color: #e6e6e6
+  color: #e6e6e6;
 }
 
 .contact > span {
@@ -36,4 +41,16 @@
 .list_item > a {
   text-decoration: none;
   color: inherit;
+}
+
+.guestbook {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+}
+
+.guestbook_title {
+  font-weight: bold;
+  font-size: 1.5rem;
 }
