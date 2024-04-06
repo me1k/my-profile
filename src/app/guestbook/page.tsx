@@ -96,7 +96,7 @@ const Guestbook = () => {
               Submit
             </Button>
           </div>
-          <div style={{ width: '100%', overflow: 'scroll' }}>
+          <div style={{ width: '100%', overflow: 'scroll', maxHeight: '45rem' }}>
             {posts.length === 0 ? (
               <div style={{ textAlign: 'center', marginTop: '1rem' }}>
                 Loading
