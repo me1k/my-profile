@@ -82,12 +82,14 @@ const Guestbook = () => {
               label="Author"
               variant="outlined"
               onChange={handleAuthorChange}
+              value={author}
             />
             <TextField
               id="outlined-basic"
               label="Text"
               variant="outlined"
               onChange={handleTextChange}
+              value={content}
             />
 
             <Button variant="contained" onClick={handleSubmit}>
