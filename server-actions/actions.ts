@@ -9,7 +9,6 @@ export const getData = async (): Promise<Post[]> => {
 };
 
 export type Post = {
-  title: string;
   content: string;
   published: Date;
   author: string;
@@ -22,7 +21,6 @@ export const createData = async (
   const post = await prisma.post.create({
     data: {
       author,
-      title: 'hello',
       content,
       published: new Date(),
     },
