@@ -99,7 +99,7 @@ const Guestbook = () => {
           <div style={{ width: '100%', overflow: 'scroll', maxHeight: '45rem' }}>
             {posts.length === 0 ? (
               <div style={{ textAlign: 'center', marginTop: '1rem' }}>
-                Loading
+                No commentst yet
               </div>
             ) : (
               posts.map((post, index) => (
