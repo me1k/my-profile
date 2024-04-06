@@ -5,7 +5,6 @@ import styles from './page.module.css';
 export const metadata: Metadata = {
   title: 'meik bolender - web developer',
   description: 'web developer',
-  themeColor: 'black',
 };
 
 export default function RootLayout({
